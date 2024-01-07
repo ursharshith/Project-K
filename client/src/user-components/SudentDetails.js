@@ -122,7 +122,7 @@ export default function StudentDetails({ filename }) {
       .catch((err) => console.log(err));
 
     axios
-      .post("http://localhost:8080/residential_address_details", {
+      .post("https://project-wmxw.onrender.com/residential_address_details", {
         email,
         district,
         mandal,
@@ -134,7 +134,7 @@ export default function StudentDetails({ filename }) {
       .catch((err) => console.log(err));
 
     axios
-      .post("http://localhost:8080/institution_detail", {
+      .post("https://project-wmxw.onrender.com/institution_detail", {
         email,
         districtInstitution,
         mandalInstitution,
