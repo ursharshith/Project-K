@@ -64,7 +64,7 @@ const AdminHome = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:8080/application_mails")
+      .get("https://project-wmxw.onrender.com/application_mails")
       .then((res) => {
         setMailsData(res.data);
         console.log(res.data);
@@ -85,7 +85,7 @@ const AdminHome = () => {
     setShowDetails(true)
 
     if (user.applicationType === "student") {
-      axios.get(`http://localhost:8080/student-apply-personal-details/${user.email}`)
+      axios.get(`https://project-wmxw.onrender.com/student-apply-personal-details/${user.email}`)
       // setStudentDetails(res.data)
         .then((res) => {
           setName(res.data.name)
@@ -99,7 +99,7 @@ const AdminHome = () => {
         
         .catch((err) => console.log(err))
 
-      axios.get(`http://localhost:8080/student-apply-study-details/${user.email}`)
+      axios.get(`https://project-wmxw.onrender.com/student-apply-study-details/${user.email}`)
       // setStudentStudyDetails(res.data)
         .then((res) => {
           setSSCType(res.data.sscType)
@@ -110,7 +110,7 @@ const AdminHome = () => {
         })
         .catch((err) => console.log(err))
 
-      axios.get(`http://localhost:8080/student-apply-insitution-details/${user.email}`)
+      axios.get(`https://project-wmxw.onrender.com/student-apply-insitution-details/${user.email}`)
       // setStudentInstituionDetails(res.data)
         .then((res) => {
           // setDistrictInstitution(res.data.)
@@ -122,7 +122,7 @@ const AdminHome = () => {
         })
         .catch((err) => console.log(err))
 
-      axios.get(`http://localhost:8080/student-apply-residential-details/${user.email}`)
+      axios.get(`https://project-wmxw.onrender.com/student-apply-residential-details/${user.email}`)
       // setStudentResidentialDetails(res.data)
         .then((res) => {
           setDistrict(res.data.district)
@@ -133,7 +133,7 @@ const AdminHome = () => {
         })
         .catch((err) => console.log(err))
 
-        axios.get(`http://localhost:8080/getImage/${user.email}`)
+        axios.get(`https://project-wmxw.onrender.com/getImage/${user.email}`)
     .then((res) => setImageUrl(res.data.imageurl))
     .catch((err) => console.log(err));
 
@@ -142,7 +142,7 @@ const AdminHome = () => {
     }  
   };
 
-  const link = `http://localhost:8080/uploads/${imageUrl}`
+  const link = `https://project-wmxw.onrender.com/uploads/${imageUrl}`
 
   console.log(imageUrl)
   console.log(link)

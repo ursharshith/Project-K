@@ -87,7 +87,7 @@ export default function StudentDetails({ filename }) {
     formData.append("iam", name);
 
     axios
-      .post("http://localhost:8080/uploadPhoto", formData, {
+      .post("https://project-wmxw.onrender.com/uploadPhoto", formData, {
         body: {
           email:email,
         }
@@ -96,7 +96,7 @@ export default function StudentDetails({ filename }) {
       .catch((err) => console.log(err));
 
     axios
-      .post("http://localhost:8080/student_personal_details", {
+      .post("https://project-wmxw.onrender.com/student_personal_details", {
         name,
         dob,
         gender,
@@ -110,7 +110,7 @@ export default function StudentDetails({ filename }) {
       .catch((err) => console.log(err));
 
     axios
-      .post("http://localhost:8080/student_study_details", {
+      .post("https://project-wmxw.onrender.com/student_study_details", {
         email,
         sscBoard,
         sscType,
@@ -937,7 +937,7 @@ export default function StudentDetails({ filename }) {
             </div>
           </div>
           <div style={{ margin: "auto" }}>
-            <img src={`http://localhost:8080/${imageUrl}`} alt="" />
+            <img src={`https://project-wmxw.onrender.com/${imageUrl}`} alt="" />
             <Button
               type="text"
               onClick={handleEdit}
