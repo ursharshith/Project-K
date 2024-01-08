@@ -299,7 +299,7 @@ export default function Home() {
           >
             {titleHandle && (
               <Typography variant="h6" noWrap component="div">
-                My-Project
+                busPass
               </Typography>
             )}
             <IconButton
